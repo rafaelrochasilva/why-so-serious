@@ -4,7 +4,7 @@ get '/' do
 end
 
 get '/joke/show/:id' do
-  joke = Joke.find(params[:id]) #what do you want to do with this array here, or in page.
+  @joke = Joke.find(params[:id]) #what do you want to do with this array here, or in page.
   erb :'joke/show'
 end
 
