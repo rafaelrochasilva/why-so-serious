@@ -1,3 +1,4 @@
+
 Joker.create(email: "heath_ledger@oscars.com", password: "toosoon", nickname: "Aussie")
  Joke.create(joke_title: "title", text_one: "textone", text_two: "texttwo", text_three: "textthree")
  # Ants notes
@@ -6,4 +7,5 @@ Joker.create(email: "heath_ledger@oscars.com", password: "toosoon", nickname: "A
   # ImageJoke.first
 
 Image.create(path: "/public/img/kitten.gif")
+
 

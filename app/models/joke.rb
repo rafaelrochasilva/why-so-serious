@@ -11,3 +11,5 @@ class Joke < ActiveRecord::Base
   validates :text_three, presence: true
 
 end
+
+
