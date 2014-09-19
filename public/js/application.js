@@ -7,6 +7,7 @@ $(document).ready(function() {
     $(img_meme_parent).hide();
     var src_my_image = $(img_meme).attr('src');
     image_element.attr("src", src_my_image);
+    $("#image_input").attr("value", src_my_image);
 
     image_element.parent().show();
   });

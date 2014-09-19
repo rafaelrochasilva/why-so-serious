@@ -1,15 +1,15 @@
 <% @images = ["../images/jack.png", "../images/jack.png", "../images/jack.png","../images/jack.png","../images/jack.png","../images/jack.png","../images/jack.png", "../images/jack.png", "../images/jack.png","../images/jack.png","../images/jack.png","../images/jack.png"] %>
 
-<form action="/" method="POST">
+<form action="/joke/new" method="POST">
   <div class="title">
     <label>Title:</label>
-    <input name="title">
+    <input name="joke[joke_title]">
   </div>
 
 
   <div class="card">
     <div class="joke_text">
-      <textarea id="text_1" name="text_1"></textarea>
+      <textarea id="text_one" name="joke[text_one]"></textarea>
     </div>
 
     <div class="joke_small_images">
@@ -35,13 +35,13 @@
     </div>
 
     <div class="joke_text">
-      <textarea id="text_2" name="text_2"></textarea>
+      <textarea id="text_two" name="joke[text_two]"></textarea>
     </div>
   </div>
 
   <div class="card">
     <div class="joke_text">
-      <textarea id="text_3" name="text_3"></textarea>
+      <textarea id="text_three" name="joke[text_three]"></textarea>
     </div>
 
     <div class="joke_small_images">
@@ -55,5 +55,9 @@
     </div>
   </div>
 
+  <input id = "image_input1" name="image" type="hidden" value="">
+  <!-- <input id = "image_input2" name="image2" type="hidden" value="">
+  <input id = "image_input3" name="image3" type="hidden" value="">
+ -->
   <input type="submit" value="SAVE">
 </form>
