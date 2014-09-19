@@ -1,1 +1,8 @@
-<!-- show all jokes -->
+<div class="container">
+  <h1><center>~!~JAKR'S JOKES~!~</center></h1>
+  <ul><%@jokes.each do |joke| %>
+    <li><%=joke.created_at.to_s[5..10]%><a href="/joke/show/<%=joke.id%>"><%=joke.joke_title%></a></li>
+    <%end%>
+  </ul>
+</div>
+
