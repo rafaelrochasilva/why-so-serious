@@ -8,16 +8,11 @@ get '/joke/show/:id' do
   erb :'joke/show'
 end
 
-
-
-get '/create_joker' do
-end
-
 get '/joke/new' do
   erb :'joke/new'
 end
 
-
+get '/create_joker' do
   erb :create_joker
 end
 
