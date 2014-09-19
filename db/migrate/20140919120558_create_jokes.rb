@@ -15,3 +15,4 @@ class CreateJokes < ActiveRecord::Migration
 end
 
 
+
