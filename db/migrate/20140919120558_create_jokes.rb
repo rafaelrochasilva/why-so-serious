@@ -16,4 +16,3 @@ end
 
 
 
-# Joker.create(email: "heath_ledger@oscars.com", password: "toosoon", nickname: "Aussie")
