@@ -9,3 +9,5 @@ class Joke < ActiveRecord::Base
   validates :image_two, presence: true
   validates :image_three, presence: true
 end
+
+
