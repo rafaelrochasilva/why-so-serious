@@ -5,9 +5,6 @@ class CreateJokes < ActiveRecord::Migration
       t.text :text_one
       t.text :text_two
       t.text :text_three
-      t.string :image_one
-      t.string :image_two
-      t.string :image_three
       t.belongs_to :joker
       t.timestamps
     end
