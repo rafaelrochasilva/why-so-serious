@@ -3,3 +3,7 @@ get '/' do
   erb :index
 end
 
+get '/create_joker' do
+
+
+
