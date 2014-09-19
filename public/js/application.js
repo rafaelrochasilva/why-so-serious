@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $(".icon_img").on("click", function(event){
+    var img_meme = event.target;
+    var img_meme_parent = $(img_meme).parent();
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    $(img_meme_parent).hide();
+    var src_my_image = $(img_meme).attr('src');
+    console.log(src_my_image);
+    $(".joke_big_image icon_img").attr("src", src_my_image) ;
+    $(".joke_big_image icon_img").show();
+  });
 });
