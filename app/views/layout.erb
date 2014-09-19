@@ -25,11 +25,12 @@
     <div class="logo">why so serious?</div>
     <nav>
       <ul>
-        <% if session[:current_user] %>
-          <li><a href="">Make a Joke</a></li>
-          <li><a href="">Log Out</a></li>
+        <% if session[:joker_id] %>
+          <li><a href="/joke/new">Make a Joke</a></li>
+          <li><a href="/logout">Log Out</a></li>
         <% else %>
-          <li><a href="">Login/Sign Up</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/create_joker">Sign Up</a></li>
         <% end %>
       </ul>
     </nav>

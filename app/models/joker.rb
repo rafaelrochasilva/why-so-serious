@@ -21,8 +21,8 @@ class Joker < ActiveRecord::Base
     email = user_info[:email]
     password = user_info[:password]
 
-    user = User.find_by_email(email)
-    return user if user && user.password == password
+    joker = Joker.find_by_email(email)
+    return joker if joker && joker.password == password
     nil
   end
 end
