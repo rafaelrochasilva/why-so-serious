@@ -8,12 +8,3 @@ class Joke < ActiveRecord::Base
   validates :image_two, presence: true
   validates :image_three, presence: true
 end
-    # create_table :jokes do |t|
-    #   t.text :text_one
-    #   t.text :text_two
-    #   t.text :text_three
-    #   t.string :image_one
-    #   t.string :image_two
-    #   t.string :image_three
-    #   t.belongs_to :joker
-    #   t.timestamps
