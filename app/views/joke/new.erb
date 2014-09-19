@@ -1,13 +1,54 @@
+<% @images = ["images/jack.png", "images/jack.png", "images/jack.png","images/jack.png"] %>
+
 <form action="/" method="POST">
 
-  <div class="odd_card">
-    <div class="text"><textarea name=""></textarea></div>
-    <div></div>
+  <div class="card">
+    <div class="joke_text">
+      <textarea id="text_1" name="text_1"></textarea>
+    </div>
+
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
+
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
   </div>
 
-  <div></div>
+  <div class="card">
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
 
-  <div></div>
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
 
+    <div class="joke_text">
+      <textarea id="text_2" name="text_2"></textarea>
+    </div>
+  </div>
 
+  <div class="card">
+    <div class="joke_text">
+      <textarea id="text_3" name="text_3"></textarea>
+    </div>
+
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
+
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
+  </div>
+
+  <input type="submit" value="SAVE">
 </form>
