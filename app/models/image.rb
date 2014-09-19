@@ -3,5 +3,3 @@ class Image < ActiveRecord::Base
   has_many :image_jokes
   has_many :jokes, through: :image_jokes
 end
-
-

@@ -3,5 +3,3 @@ class ImageJoke < ActiveRecord::Base
   belongs_to :joke
   belongs_to :image
 end
-
-

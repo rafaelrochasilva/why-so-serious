@@ -6,4 +6,3 @@ class CreateImages < ActiveRecord::Migration
     end
   end
 end
-

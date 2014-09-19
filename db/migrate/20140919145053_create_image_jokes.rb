@@ -7,4 +7,3 @@ class CreateImageJokes < ActiveRecord::Migration
     end
   end
 end
-
