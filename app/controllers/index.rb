@@ -1,5 +1,5 @@
 get '/' do
-  @jokes = Joke.all
+  @jokes = Joke.all.reverse
   erb :index
 end
 
@@ -9,27 +9,26 @@ get '/joke/show/:id' do
 end
 
 get '/joke/new' do
-  erb :'joke/new'
+  if session[:joker_id]
+    erb :'joke/new'
+  else
+    erb :login
+  end
 end
 
 post '/joke/new' do
-  p "------------------Creating a new joke"
-  p params[:joke_title]
-  p params[:text_one]
-  p params[:text_two]
-  p params[:text_three]
-
-  @joke = Joke.create(joke_title: params[:joke_title],
+  joker = Joker.find(session[:joker_id])
+  joke = joker.jokes.create(joke_title: params[:joke_title],
                       text_one: params[:text_one],
                       text_two: params[:text_two],
                       text_three: params[:text_three],
                       )
 
-  @joke.images << Image.where(path: params[:image1]).first_or_create
-  @joke.images << Image.where(path: params[:image2]).first_or_create
-  @joke.images << Image.where(path: params[:image3]).first_or_create
+  joke.images.find_or_create_by(path: params[:image1])
+  joke.images.find_or_create_by(path: params[:image2])
+  joke.images.find_or_create_by(path: params[:image3])
   
-  redirect :"joke/show/#{@joke.id}"
+  redirect :"joke/show/#{joke.id}"
 end
 
 get '/create_joker' do
