@@ -8,6 +8,8 @@
 
 
   <div class="card">
+    <input class = "image_input" name="image1" type="hidden" value="">
+
     <div class="joke_text">
       <textarea id="text_one" name="joke[text_one]"></textarea>
     </div>
@@ -21,9 +23,12 @@
     <div class="joke_big_image">
       <img class="icon_img" src="">
     </div>
+
   </div>
 
   <div class="card">
+    <input class = "image_input" name="image2" type="hidden" value="">
+    
     <div class="joke_small_images">
       <% @images.each do |image| %>
         <img class="icon_img" src="<%=image%>">
@@ -40,6 +45,8 @@
   </div>
 
   <div class="card">
+    <input class = "image_input" name="image3" type="hidden" value="">
+
     <div class="joke_text">
       <textarea id="text_three" name="joke[text_three]"></textarea>
     </div>
@@ -55,9 +62,6 @@
     </div>
   </div>
 
-  <input id = "image_input1" name="image" type="hidden" value="">
-  <!-- <input id = "image_input2" name="image2" type="hidden" value="">
-  <input id = "image_input3" name="image3" type="hidden" value="">
- -->
+
   <input id = "save_btn" type="submit" value="SAVE">
 </form>

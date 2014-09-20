@@ -25,6 +25,8 @@ header {
   width: 30%;
   line-height: 60px;
   margin-left: 20px;
+  color: white;
+  text-shadow: 1px 1px #c8034b, -1px -1px #222;
 }
 
 a {
