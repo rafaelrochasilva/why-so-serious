@@ -16,6 +16,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'numbers_and_words'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

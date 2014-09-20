@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $(".icon_img").on("click", function(event){
     var img_meme = event.target;
     var img_meme_parent = $(img_meme).parent();

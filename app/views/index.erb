@@ -1,8 +1,37 @@
-<div class="container">
-  <h1><center>~!~JAKR'S JOKES~!~</center></h1>
-  <ul><%@jokes.each do |joke| %>
-    <li><%=joke.created_at.to_s[5..10]%><a href="/joke/show/<%=joke.id%>"><%=joke.joke_title%></a></li>
-    <%end%>
-  </ul>
-</div>
+<h1><center>~!~JAKR'S JOKES~!~</center></h1>
+
+<%@jokes.each do |joke| %>
+  
+	<div class="joke">
+
+			<h1 class="title"><%=joke.joke_title%></h1>
+
+			<div class="card">
+			  <textarea class="joke_text" readonly><%=joke.text_one%></textarea>
+
+			  <div class="joke_big_image" style="display: block">
+			    <img class="icon_img" src="../<%=joke.images.first.path%>">
+			  </div>
+			</div>
+
+
+			<div class="card">
+			  <div class="joke_big_image" style="display: block">
+			    <img class="icon_img" src="../<%=joke.images.second.path%>">
+			  </div>
+
+			  <textarea class="joke_text" readonly><%=joke.text_two%></textarea>
+			</div>
+
+			<div class="card">
+			  <textarea class="joke_text" readonly><%=joke.text_three%></textarea>
+
+			  <div class="joke_big_image" style="display: block">
+			    <img class="icon_img" src="../<%=joke.images.third.path%>">
+			  </div>
+			</div>
+	</div>
+    
+<%end%>
+
 
