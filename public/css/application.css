@@ -80,7 +80,7 @@ nav a:hover {
   height: 100%;
   margin: 0 auto;
   display: block;
-  
+
 }
 
 .joke {
@@ -100,9 +100,10 @@ nav a:hover {
 }
 
 .card textarea {
+  padding: 2%;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 1.6em;
-  width: 99%;
+  width: 96%;
   height: 280px;
   display: block;
   border: none;
@@ -170,5 +171,30 @@ nav a:hover {
   margin: 0 auto;
 }
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 
+.clearfix {
+  display: block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+h2{
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+  font-size: 2.5em;
+}
 
