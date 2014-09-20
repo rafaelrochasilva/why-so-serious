@@ -28,9 +28,19 @@ header {
   color: white;
   text-shadow: 1px 1px #c8034b, -1px -1px #222;
 }
+.logo a , .logo a:visited {
+  color: #fff;
+}
+
+.logo a:hover{
+  color: blue;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 
 a {
   text-decoration: none;
+
 }
 
 ul {
@@ -73,10 +83,8 @@ nav a:hover {
   
 }
 
-.container .joke {
-  display: block;
-  width: auto;
-  height: auto;
+.joke {
+  padding-top: 40px;
 }
 
 .card {
@@ -98,6 +106,7 @@ nav a:hover {
   height: 280px;
   display: block;
   border: none;
+  resize: none;
 }
 
 .card .joke_small_images {
@@ -142,6 +151,11 @@ nav a:hover {
   text-align: center;
 }
 
+.title span {
+  font-size: 0.6em;
+  color: #d9145c;
+}
+
 #save_btn {
   float: right;
 }
@@ -155,5 +169,6 @@ nav a:hover {
   width: 50%;
   margin: 0 auto;
 }
+
 
 

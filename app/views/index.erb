@@ -1,37 +1,8 @@
-<h1><center>~!~JAKR'S JOKES~!~</center></h1>
+<h1><center>laugh and the world laughs with you</center></h1>
 
 <%@jokes.each do |joke| %>
-  
-	<div class="joke">
-
-			<h1 class="title"><%=joke.joke_title%></h1>
-
-			<div class="card">
-			  <textarea class="joke_text" readonly><%=joke.text_one%></textarea>
-
-			  <div class="joke_big_image" style="display: block">
-			    <img class="icon_img" src="../<%=joke.images.first.path%>">
-			  </div>
-			</div>
-
-
-			<div class="card">
-			  <div class="joke_big_image" style="display: block">
-			    <img class="icon_img" src="../<%=joke.images.second.path%>">
-			  </div>
-
-			  <textarea class="joke_text" readonly><%=joke.text_two%></textarea>
-			</div>
-
-			<div class="card">
-			  <textarea class="joke_text" readonly><%=joke.text_three%></textarea>
-
-			  <div class="joke_big_image" style="display: block">
-			    <img class="icon_img" src="../<%=joke.images.third.path%>">
-			  </div>
-			</div>
-	</div>
-    
+  <% @joke = joke %>
+	<%= erb :'joke/show' %> 
 <%end%>
 
 
