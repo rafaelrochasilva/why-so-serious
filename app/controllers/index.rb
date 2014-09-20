@@ -8,10 +8,19 @@ get '/joke/show/:id' do
   erb :'joke/show'
 end
 
+get '/joke/new' do
+  erb :'joke/new'
+end
 
+post '/joke/new' do
+  @joke = Joke.create(params[:joke])
+  @joke.images << Image.where(path: params[:image]).first_or_create
+  # @joke << Image.where(path: params[:image2]).first_or_create
+  # @joke << Image.where(path: params[:image3]).first_or_create
+  redirect "/joke/show/#{@joke.id}"
+end
 
 get '/create_joker' do
-
   erb :create_joker
 end
 
