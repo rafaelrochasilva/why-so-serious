@@ -135,4 +135,14 @@ nav a:hover {
   float: right;
 }
 
+.login_container {
+  font-family: 'Gloria Hallelujah', cursive;
+  background: white;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
 
