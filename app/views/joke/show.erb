@@ -4,32 +4,31 @@
 
 <div class="card">
   <div class="joke_text">
-    <textarea readonly id="text_one" name="joke[text_one]"><%=@joke.text_one%></textarea>
+    <textarea readonly><%=@joke.text_one%></textarea>
   </div>
 
-  <div class="joke_big_image">
-    <img class="icon_img" src="<%=@joke%>">
-  </div>
-</div>
-
-<div class="card">
-
-  <div class="joke_big_image">
-    <img class="icon_img" src="<%=@joke%>">
-  </div>
-
-  <div class="joke_text">
-    <textarea readonly id="text_two" name="joke[text_two]"><%=@joke.text_two%></textarea>
+  <div class="joke_big_image" style="display: block">
+    <img class="icon_img" src="../<%=@joke.images.first.path%>">
   </div>
 </div>
 
 <div class="card">
-  <div class="joke_text">
-    <textarea readonly id="text_three" name="joke[text_three]"><%=@joke.text_three%></textarea>
+  <div class="joke_big_image" style="display: block">
+    <img class="icon_img" src="../<%=@joke.images.second.path%>">
   </div>
 
-  <div class="joke_big_image">
-    <img class="icon_img" src="<%=@joke%>">
+  <div class="joke_text">
+    <textarea readonly><%=@joke.text_two%></textarea>
+  </div>
+</div>
+
+<div class="card">
+  <div class="joke_text">
+    <textarea readonly><%=@joke.text_three%></textarea>
+  </div>
+
+  <div class="joke_big_image" style="display: block">
+    <img class="icon_img" src="../<%=@joke.images.third.path%>">
   </div>
 </div>
 

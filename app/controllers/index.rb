@@ -13,11 +13,23 @@ get '/joke/new' do
 end
 
 post '/joke/new' do
-  @joke = Joke.create(params[:joke])
-  @joke.images << Image.where(path: params[:image]).first_or_create
-  # @joke << Image.where(path: params[:image2]).first_or_create
-  # @joke << Image.where(path: params[:image3]).first_or_create
-  redirect "/joke/show/#{@joke.id}"
+  p "------------------Creating a new joke"
+  p params[:joke_title]
+  p params[:text_one]
+  p params[:text_two]
+  p params[:text_three]
+
+  @joke = Joke.create(joke_title: params[:joke_title],
+                      text_one: params[:text_one],
+                      text_two: params[:text_two],
+                      text_three: params[:text_three],
+                      )
+
+  @joke.images << Image.where(path: params[:image1]).first_or_create
+  @joke.images << Image.where(path: params[:image2]).first_or_create
+  @joke.images << Image.where(path: params[:image3]).first_or_create
+  
+  redirect :"joke/show/#{@joke.id}"
 end
 
 get '/create_joker' do
