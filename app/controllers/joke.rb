@@ -3,11 +3,23 @@ get '/joke/show/:id' do
   erb :'joke/show'
 end
 
+get '/jokes/my_jokes' do
+  if session[:joker_id]
+    p "-"*20
+    p session[:joker_id]
+    p Joke.where(joker_id: session[:joker_id])
+    @my_jokes = Joke.where(joker_id: session[:joker_id])
+    erb :'joke/my_jokes'
+  else
+    erb :'login/login'
+  end
+end
+
 get '/joke/new' do
   if session[:joker_id]
     erb :'joke/new'
   else
-    erb :login
+    erb :'login/login'
   end
 end
 
@@ -27,8 +39,12 @@ post '/joke/new' do
 end
 
 get '/joke/:id/edit' do
-  @joke = Joke.find(params[:id])
-  erb :'joke/edit'
+  if session[:joker_id]
+    @joke = Joke.find(params[:id])
+    erb :'joke/edit'
+  else
+    erb :'login/login'
+  end
 end
 
 put '/joke/:id/edit' do
