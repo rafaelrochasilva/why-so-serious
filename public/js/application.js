@@ -16,4 +16,13 @@ $(document).ready(function() {
 
     image_element.parent().show();
   });
+
+  $(".back_btn").on("click", function(event){
+    var button_parent = $(event.target).parent();
+    var card = $(button_parent).parent();
+    $(button_parent).hide();
+    var small_image = $(card).find('.joke_small_images');
+
+    $(small_image).show();
+  });
 });
