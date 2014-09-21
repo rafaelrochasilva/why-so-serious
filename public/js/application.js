@@ -25,4 +25,12 @@ $(document).ready(function() {
 
     $(small_image).show();
   });
+
+  $("#btn_delete").on('submit', function(event){
+    event.preventDefault();
+
+    $.post( "/joke", $(this).serialize(), function(e){
+      $(event.target).parent().parent().remove();
+    });
+  });
 });

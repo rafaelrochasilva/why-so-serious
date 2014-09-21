@@ -4,8 +4,11 @@ end
 
 post '/login' do
   joker = Joker.authenticate(params[:joker])
-  session[:joker_id] = joker.id
-  redirect '/'
+  unless joker.nil?
+    session[:joker_id] = joker.id
+    redirect '/'
+  end
+  redirect '/login'
 end
 
 get '/logout' do
