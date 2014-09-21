@@ -12,10 +12,12 @@ body {
 }
 
 header {
+  position: absolute;
   color: white;
   background-color: #d9145c;
   width: 100%;
   height: 60px;
+  top: 0;
 }
 
 .logo {
@@ -28,12 +30,21 @@ header {
   color: white;
   text-shadow: 1px 1px #c8034b, -1px -1px #222;
 }
+
+.logo img {
+  width: 25%;
+  height: 25%;
+  float: left;
+  margin-right: 10px;
+}
+
 .logo a , .logo a:visited {
+  float: left;
   color: #fff;
 }
 
 .logo a:hover{
-  color: blue;
+  color: #000;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -69,45 +80,68 @@ nav a {
 }
 
 nav a:hover {
-  color: blue;
+  color: #000;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.container {
-  background-color: rgba(255,255,255,0.5);
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  display: block;
+.main_title{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.5em;
+  color: #d9145c;
+  text-align: right;
+  width: 100%;
+  text-shadow: 1px 1px #c8034b, -1px -1px #AAA;
 
 }
 
+.container {
+  /*background-color: rgba(255,255,255,0.5);*/
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-top : 80px;
+}
+
 .joke {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 .card {
   background-color: #222;
   width: 28%;
-  min-width: 250px;
+  min-width: 200px;
   float: left;
   padding: 1%;
   margin: 1%;
   position: relative;
   display: block;
-  height: 600px;
+  height: 360px;
 }
 
 .card textarea {
   padding: 2%;
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 1.6em;
+  font-size: 1.3em;
   width: 96%;
-  height: 280px;
+  height: 160px;
   display: block;
   border: none;
   resize: none;
+}
+
+#save_btn {
+  color: #c8034b;
+  font-family: 'Gloria Hallelujah', cursive;
+  background: none;
+  font-weight: bold;
+  border: 3px solid #c8034b;
+}
+#save_btn:hover {
+  border: 5px solid #000;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .card .joke_small_images {
@@ -149,7 +183,7 @@ nav a:hover {
   font-family: 'Gloria Hallelujah', cursive;
   padding: 10px;
   margin: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .title span {
@@ -192,9 +226,5 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
-h2{
-  font-family: 'Gloria Hallelujah', cursive;
-  padding-top: 30px;
-  font-size: 2.5em;
-}
+
 

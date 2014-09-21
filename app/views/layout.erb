@@ -16,15 +16,18 @@
 </head>
 <body>
   <header>
-    <div class="logo"><a href="/">why so serious?</a></div>
+    <div class="logo">
+      <img src="/images/logo.png">
+      <a href="/">why so serious?</a>
+    </div>
     <nav>
       <ul>
         <% if session[:joker_id] %>
-          <li><a href="/joke/new">Make a Joke</a></li>
-          <li><a href="/logout">Log Out</a></li>
+          <li><a href="/joke/new">make a joke</a></li>
+          <li><a href="/logout">log out</a></li>
         <% else %>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/singup">Sign Up</a></li>
+          <li><a href="/login">login</a></li>
+          <li><a href="/singup">sign up</a></li>
         <% end %>
       </ul>
     </nav>
