@@ -12,12 +12,13 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   color: white;
   background-color: #d9145c;
   width: 100%;
   height: 60px;
   top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -139,7 +140,7 @@ nav a:hover {
   border: 3px solid #c8034b;
 }
 #save_btn:hover {
-  border: 5px solid #000;
+  border: 3px solid #000;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -179,6 +180,12 @@ nav a:hover {
 
 }
 
+.edit_buttons{
+  width: 100%;
+  float: left;
+  display: block;
+}
+
 .title {
   font-family: 'Gloria Hallelujah', cursive;
   padding: 10px;
@@ -193,6 +200,7 @@ nav a:hover {
 
 #save_btn {
   float: right;
+  margin: 5px;
 }
 
 .login_container {

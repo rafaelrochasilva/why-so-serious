@@ -10,4 +10,15 @@
       <% end %>
     </div>
   <% end %>
+
+  <% if @joke.joker.id == session[:joker_id] %>
+    <div class="edit_buttons">
+      <a href="/joke/<%=@joke.id%>/edit"><button id = "save_btn">edit</button></a>
+      
+      <form action="/joke/<%=@joke.id%>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input id = "save_btn" type="submit" value="delete">
+      </form>
+    </div>
+  <% end %>
 </div>

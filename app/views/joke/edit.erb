@@ -1,0 +1,77 @@
+<% @images = [ "../../images/jack.png", "../../images/cry.jpeg",
+               "../../images/happy.jpg","../../images/heard_break.png",
+               "../../images/like_a_boss.jpeg","../../images/lol.jpg",
+               "../../images/mad.png", "../../images/no.jpg", 
+               "../../images/okay.jpeg","../../images/true_story.jpeg",
+               "../../images/friendly-suricato.jpeg","../../images/friends_suricato.jpeg",
+               "../../images/pirate_suricato.jpeg","../../images/suricato_thinker.jpeg",
+               "../../images/thinking_suricato.jpeg","../../images/mad_female.jpeg",
+               ] %>
+
+<form action="/joke/<%=@joke.id%>/edit" method="POST">
+  <input name="_method" type="hidden" value="PUT">
+
+  <div class="title">
+    <label>Joke Title:</label>
+    <input name="joke_title" value=<%=@joke.joke_title%> >
+  </div>
+
+
+  <div class="card">
+    <input class = "image_input" name="image1" type="hidden" value="">
+
+    <div class="joke_text">
+      <textarea id="text_one" name="text_one"><%=@joke.text_one%></textarea>
+    </div>
+
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
+
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
+
+  </div>
+
+  <div class="card">
+    <input class = "image_input" name="image2" type="hidden" value="">
+    
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
+
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
+
+    <div class="joke_text">
+      <textarea id="text_two" name="text_two"><%=@joke.text_two%></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <input class = "image_input" name="image3" type="hidden" value="">
+
+    <div class="joke_text">
+      <textarea id="text_three" name="text_three"><%=@joke.text_three%></textarea>
+    </div>
+
+    <div class="joke_small_images">
+      <% @images.each do |image| %>
+        <img class="icon_img" src="<%=image%>">
+      <% end %>
+    </div>
+
+    <div class="joke_big_image">
+      <img class="icon_img" src="">
+    </div>
+  </div>
+
+
+  <input id = "save_btn" type="submit" value="SAVE">
+</form>
