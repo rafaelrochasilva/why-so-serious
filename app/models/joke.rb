@@ -9,11 +9,6 @@ class Joke < ActiveRecord::Base
   validates :text_one, presence: true
   validates :text_two, presence: true
   validates :text_three, presence: true
-
-  # def joker
-  # 	# Joker.find(self.joker.)
-  # end
-
 end
 
 
