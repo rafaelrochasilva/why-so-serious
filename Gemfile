@@ -18,9 +18,7 @@ gem 'shotgun'
 
 gem 'numbers_and_words'
 
-group :production do
-	gem 'thin'
-end
+gem 'thin'
 
 
 group :test do
