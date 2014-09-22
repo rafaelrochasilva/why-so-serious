@@ -18,8 +18,6 @@ gem 'shotgun'
 
 gem 'numbers_and_words'
 
-gem 'thin'
-
 
 group :test do
   gem 'shoulda-matchers'
