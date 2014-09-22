@@ -18,6 +18,11 @@ gem 'shotgun'
 
 gem 'numbers_and_words'
 
+group :production do
+	gem 'thin'
+end
+
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
