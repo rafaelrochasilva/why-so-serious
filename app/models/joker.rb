@@ -25,4 +25,5 @@ class Joker < ActiveRecord::Base
     return joker if joker && joker.password == password
     nil
   end
+
 end

@@ -22,6 +22,16 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'bcrypt'
 
+require 'omniauth'
+
+require 'omniauth-facebook'
+require 'omniauth-google-oauth2'
+
+require "dotenv"
+Dotenv.load
+
+require 'multi_json'
+
 require 'numbers_and_words'
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -46,3 +56,9 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+use OmniAuth::Builder do
+  # For additional provider examples please look at 'omni_auth.rb'
+  provider :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], {}
+  provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], {}
+end

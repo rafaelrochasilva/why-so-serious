@@ -18,6 +18,13 @@ gem 'shotgun'
 
 gem 'numbers_and_words'
 
+gem 'dotenv'
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+
+gem 'multi_json'
 
 group :test do
   gem 'shoulda-matchers'

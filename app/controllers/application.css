@@ -1,0 +1,10 @@
+#fish_bowl {
+  background-image: url('../img/water.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border: 1px;
+  border-radius: 50px;
+  position: relative;
+  z-index: -2;
+}

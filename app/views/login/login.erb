@@ -1,7 +1,12 @@
 <div class="login_container">
   <h2>Your MOM.</h2>
   <h3> Please enter your information</h3>
-  <form input="/login" method="POST">
+  <fb:login-button class="login_facebook" scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
+  </fb:login-button>
+  <div id="status"></div>
+  <!-- <a id="login_facebook" href="">Login with Facebook</a> -->
+
+<!--   <form input="/login" method="POST">
     email: <br>
     <input type="text" name="joker[email]">
     <p>
@@ -9,6 +14,6 @@
     <input type="password" name="joker[password]">
     <p>
     <input type="submit" name="submit">
-  </form>
+  </form> -->
 </div>
 

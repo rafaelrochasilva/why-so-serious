@@ -25,3 +25,14 @@ post '/singup' do
   session[:joker_id] = joker.id
   redirect '/'
 end
+
+get '/auth/:provider/callback' do
+  # content_type 'application/json'
+  # MultiJson.encode(request.env)
+  "hello"
+end
+
+get '/auth/failure' do
+  content_type 'application/json'
+  MultiJson.encode(request.env)
+end
