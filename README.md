@@ -1,30 +1,35 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+Why So Serious?
+==============
 
-### Purpose
-The Sinatra Skeleton:
+##The Problem
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+Our goal in creating this app was to bring a little more levity and laughter to the world.  We wanted users to not just create and/or submit jokes, but to combine their jokes with images.  Some users might want to use the images to create the jokes, and some might want to use the jokes to select a combination of images.
 
-### Quickstart
+Laugh and the world laughs with you!
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+[Visit Why So Serious?](http://whysoserious.herokuapp.com/)!
 
-As needed, create models & migrations with the `rake` tasks:
+## Installation
+Palate is built on Sinatra, a lightweight framework for Ruby. To set up:
 
 ```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
+git@github.com:jarmstrng/why-so-serious.git
 ```
 
-### Contributing
+Run bundle:
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
+```
+bundle install
+```
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+Start the server:
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+```
+rails s
+```
+
+## The Team
+
+* [Katherine McClintic](https://github.com/kdmcclin)
+* [Rafael Rocha](https://github.com/rafaelrochasilva)
+* [Jessica Armstrong](https://github.com/jarmstrng)
