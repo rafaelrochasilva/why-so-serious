@@ -25,7 +25,7 @@ bundle install
 Start the server:
 
 ```
-rails s
+shotgun config.ru
 ```
 
 ## The Team
